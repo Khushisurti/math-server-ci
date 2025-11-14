@@ -29,7 +29,7 @@ jobs:
         run: go build -v ./...
 
       - name: Upload binary to S3
-        uses: aws-actions/s3-sync@v2
+        uses: aws-actions/s3-sync@v1
         with:
           source: "math-server"                # Replace with your binary name
           destination: "s3://GitHubActionsLab"  # Replace with your S3 bucket name
